@@ -1,0 +1,155 @@
+/* ═══ SUCCESS STORIES ═══ */
+.stories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.story-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.story-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 1024px) {
+    .story-card {
+        grid-template-columns: 280px 1fr;
+    }
+}
+
+.story-sidebar {
+    background: var(--gray-50);
+    padding: 40px 32px;
+    border-right: 1px solid var(--gray-100);
+}
+
+.story-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.story-sidebar h3 {
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+}
+
+.story-origin {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-bottom: 24px;
+}
+
+.story-admitted {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.story-admitted svg {
+    color: var(--gold-400);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.story-admitted strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--navy-800);
+}
+
+.story-admitted span {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+}
+
+.story-main {
+    padding: 40px;
+}
+
+.story-journey {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .story-journey {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.story-phase {
+    padding: 20px;
+    border-radius: var(--radius-md);
+}
+
+.story-phase--before {
+    background: #FEF2F2;
+    border-left: 3px solid var(--error);
+}
+
+.story-phase--after {
+    background: #F0FDF4;
+    border-left: 3px solid var(--success);
+}
+
+.story-phase-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.story-phase--before .story-phase-label {
+    color: var(--error);
+}
+
+.story-phase--after .story-phase-label {
+    color: var(--success);
+}
+
+.story-phase p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.story-quote {
+    position: relative;
+    padding: 24px 32px;
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--gold-400);
+}
+
+.story-quote-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--gold-200);
+}
+
+.story-quote p {
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--gray-700);
+}

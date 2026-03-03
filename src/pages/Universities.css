@@ -1,0 +1,320 @@
+/* ═══ UNIVERSITIES ═══ */
+.page-header__note {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--gold-400);
+    font-style: italic;
+}
+
+.uni-controls {
+    margin-bottom: 40px;
+}
+
+.uni-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.uni-filter-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1.5px solid var(--gray-200);
+    background: var(--white);
+    color: var(--gray-600);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--duration-fast) ease;
+}
+
+.uni-filter-btn:hover {
+    border-color: var(--navy-800);
+    color: var(--navy-800);
+}
+
+.uni-filter-btn--active {
+    background: var(--navy-800);
+    color: var(--white);
+    border-color: var(--navy-800);
+}
+
+.uni-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .uni-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .uni-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card */
+.uni-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.uni-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.uni-card__logo {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.uni-card__logo span {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+.uni-card__logo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.uni-card__body {
+    padding: 24px;
+    flex-grow: 1;
+}
+
+.uni-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.uni-card__country {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--navy-800);
+    color: var(--white);
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+}
+
+.uni-card__ranking {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold-400);
+}
+
+.uni-card__name {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    min-height: 2.5em;
+}
+
+.uni-card__type {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+}
+
+.uni-card__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-700);
+    border-top: 1px solid var(--gray-100);
+    transition: all var(--duration-fast) ease;
+}
+
+.uni-card:hover .uni-card__link {
+    background: var(--navy-800);
+    color: var(--white);
+}
+
+/* ═══ UNIVERSITY MODAL ═══ */
+.uni-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background var(--duration-fast) ease;
+}
+
+.uni-modal__close:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.uni-modal__header {
+    padding: 48px 40px 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+.uni-modal__header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.uni-modal__abbr {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.25);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.uni-modal__name {
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.uni-modal__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.uni-modal__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+}
+
+.uni-modal__body {
+    padding: 36px 40px 40px;
+}
+
+.uni-modal__desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.uni-modal__details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.uni-modal__detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.uni-modal__detail svg {
+    color: var(--gold-400);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.uni-modal__detail strong {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--navy-800);
+    margin-bottom: 2px;
+}
+
+.uni-modal__detail span {
+    font-size: 0.88rem;
+    color: var(--gray-600);
+}
+
+.uni-modal__highlights {
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-bottom: 28px;
+}
+
+.uni-modal__highlights h4 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.uni-modal__highlights ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.uni-modal__highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: var(--gray-700);
+}
+
+.uni-modal__highlights li svg {
+    color: var(--success);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.uni-modal__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 480px) {
+    .uni-modal__header {
+        padding: 36px 24px 28px;
+    }
+
+    .uni-modal__body {
+        padding: 24px;
+    }
+}

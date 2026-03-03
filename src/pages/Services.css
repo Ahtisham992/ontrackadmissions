@@ -1,0 +1,141 @@
+/* ═══ SERVICES ═══ */
+.services-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .services-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-detail-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-detail-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.service-detail-img {
+    height: 180px;
+    overflow: hidden;
+}
+
+.service-detail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.service-detail-card:hover .service-detail-img img {
+    transform: scale(1.08);
+}
+
+.service-detail-body {
+    padding: 28px;
+}
+
+.service-detail-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-100);
+    color: var(--navy-700);
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+}
+
+.service-detail-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.service-detail-card p {
+    font-size: 0.9rem;
+}
+
+/* Journey */
+.journey-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .journey-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.journey-step {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: all var(--duration-normal) var(--ease-out);
+    text-align: center;
+}
+
+.journey-step:hover {
+    border-color: var(--gold-400);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.journey-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--gold-400);
+    line-height: 1;
+}
+
+.journey-content h4 {
+    margin-bottom: 6px;
+    color: var(--navy-800);
+}
+
+.journey-content p {
+    font-size: 0.85rem;
+}
+
+/* CTA */
+.services-cta-box {
+    background: var(--navy-800);
+    border-radius: var(--radius-xl);
+    padding: 72px 40px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.services-cta-box h2 {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.services-cta-box p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 32px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
