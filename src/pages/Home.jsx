@@ -6,6 +6,7 @@ import {
   ChevronDown, ChevronUp, MapPin, Clock
 } from 'lucide-react';
 import { useScrollReveal, useAnimatedCounter } from '../hooks/useAnimations';
+import { useLanguage } from '../i18n/LanguageContext';
 import './Home.css';
 
 const RevealSection = ({ children, className = '', delay = 0 }) => {
@@ -37,13 +38,14 @@ const AnimatedStat = ({ value, label, suffix = '' }) => {
 
 const Home = () => {
   const [openFaq, setOpenFaq] = useState(null);
+  const { t } = useLanguage();
 
   const faqs = [
-    { q: "Who is On Track Admissions for?", a: "We help students aged 17–30 who are looking to apply to international universities in the UK, USA, Canada, Australia, and Europe. We also support parents seeking guidance for their children." },
-    { q: "How does the free consultation work?", a: "After submitting your details, an expert consultant is assigned to your profile. Within 24 hours, you'll receive an email to book a 30-minute discovery call where we evaluate your goals and create a preliminary roadmap." },
-    { q: "Do you guarantee university admission?", a: "No ethical consultancy can guarantee admission. What we guarantee is a meticulously crafted application strategy that maximises your chances, backed by our 98% historical acceptance rate." },
-    { q: "How much do your services cost?", a: "Our packages vary depending on the number of universities, services required, and destination country. We offer transparent pricing starting from a single personal statement review up to comprehensive end-to-end support." },
-    { q: "Can you help with scholarship applications?", a: "Yes! Scholarship identification and application guidance is one of our core services. We've helped students secure over $2M in scholarship funding collectively." }
+    { q: t('faq.faq1q', "Who is On Track Admissions for?"), a: t('faq.faq1a', "We help students aged 17–30 who are looking to apply to international universities...") },
+    { q: t('faq.faq2q', "How does the free consultation work?"), a: t('faq.faq2a', "After submitting your details, an expert consultant is assigned to your profile...") },
+    { q: t('faq.faq3q', "Do you guarantee university admission?"), a: t('faq.faq3a', "No ethical consultancy can guarantee admission...") },
+    { q: t('faq.faq4q', "How much do your services cost?"), a: t('faq.faq4a', "Our packages vary depending on the number of universities...") },
+    { q: t('faq.faq5q', "Can you help with scholarship applications?"), a: t('faq.faq5a', "Yes! Scholarship identification and application guidance is one of our core services...") }
   ];
 
   return (
@@ -63,28 +65,26 @@ const Home = () => {
 
         <div className="container hero__inner">
           <div className="hero__content animate-fade-up">
-            <span className="section-label">Global Education Consultancy</span>
+            <span className="section-label">{t('hero.label')}</span>
             <h1 className="hero__title">
-              Your Global Future<br />
-              <span className="text-gold">Starts Here.</span>
+              {t('hero.title1')}<br />
+              <span className="text-gold">{t('hero.title2')}</span>
             </h1>
             <p className="hero__subtitle">
-              Strategic admissions consulting for ambitious students targeting
-              top universities across the UK, USA, Canada, Australia &amp; Europe.
-              Trusted by 500+ students worldwide.
+              {t('hero.desc')}
             </p>
             <div className="hero__cta">
               <Link to="/consultation" className="btn btn-primary btn-lg">
-                Book Free Consultation <ArrowRight size={18} />
+                {t('hero.cta1')} <ArrowRight size={18} />
               </Link>
               <Link to="/services" className="btn btn-outline btn-lg">
-                Explore Services
+                {t('hero.cta2')}
               </Link>
             </div>
             <div className="hero__trust-badges">
-              <div className="hero__badge"><CheckCircle size={16} /> 98% Acceptance Rate</div>
-              <div className="hero__badge"><Clock size={16} /> Response within 24hrs</div>
-              <div className="hero__badge"><Shield size={16} /> Free Initial Consultation</div>
+              <div className="hero__badge"><CheckCircle size={16} /> {t('hero.badge1')}</div>
+              <div className="hero__badge"><Clock size={16} /> {t('hero.badge2')}</div>
+              <div className="hero__badge"><Shield size={16} /> {t('hero.badge3')}</div>
             </div>
           </div>
 
@@ -98,12 +98,12 @@ const Home = () => {
               <div className="hero__card hero__card--stats">
                 <div className="hero__stat">
                   <strong>98%</strong>
-                  <span>Acceptance Rate</span>
+                  <span>{t('hero.badge1').replace('98% ', '')}</span>
                 </div>
               </div>
               <div className="hero__card hero__card--badge">
                 <Award size={20} />
-                <span>500+ Students Placed</span>
+                <span>500+ {t('stats.s1').split(' ')[0] || 'Students'}</span>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ const Home = () => {
       <section className="trust-bar">
         <div className="container">
           <div className="trust-bar__inner">
-            <span className="trust-bar__label">Students accepted at</span>
+            <span className="trust-bar__label">{t('trust.label')}</span>
             <div className="trust-bar__logos">
               {['Oxford', 'Cambridge', 'MIT', 'Stanford', 'UCL', 'Toronto', 'Melbourne'].map((uni) => (
                 <span key={uni} className="trust-bar__logo">{uni}</span>
@@ -129,20 +129,20 @@ const Home = () => {
         <div className="container">
           <RevealSection>
             <div className="section-header text-center">
-              <span className="section-label" style={{ justifyContent: 'center' }}>What We Do</span>
-              <h2>End-to-End Admissions<br />Support</h2>
-              <p className="section-desc">Comprehensive guidance from university selection to visa approval, designed to maximise your chances at the world's most competitive institutions.</p>
+              <span className="section-label" style={{ justifyContent: 'center' }}>{t('servicesSection.label')}</span>
+              <h2>{t('servicesSection.title1')}<br />{t('servicesSection.title2')}</h2>
+              <p className="section-desc">{t('servicesSection.desc')}</p>
             </div>
           </RevealSection>
 
           <div className="services-grid">
             {[
-              { icon: <BookOpen size={28} />, title: "University Selection", desc: "Data-driven matching to find institutions aligned with your academic profile, budget, and career ambitions.", img: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80" },
-              { icon: <Briefcase size={28} />, title: "Application Strategy", desc: "Expert management of timelines, documents, and narratives across Common App, UCAS, OUAC, and more.", img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" },
-              { icon: <TrendingUp size={28} />, title: "Personal Statement", desc: "Compelling, authentic essays reviewed by former admissions officers from top global universities.", img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80" },
-              { icon: <Users size={28} />, title: "Interview Preparation", desc: "Intensive mock sessions covering behavioural, technical, and program-specific interview formats.", img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" },
-              { icon: <Globe size={28} />, title: "Visa & Relocation", desc: "Meticulous visa documentation and pre-departure briefings for a seamless international transition.", img: "https://remote.com/hubfs/Remote%20Website%20-%202025/(Approved)%20Blog%20Images/Blog%20Images/Immigration%20%26%20Visas.png" },
-              { icon: <Shield size={28} />, title: "Scholarship Guidance", desc: "Strategic scholarship identification and application support to reduce your financial burden.", img: "https://media.istockphoto.com/id/1161001258/photo/scholarship-cap-magnified.jpg?s=2048x2048&w=is&k=20&c=yl9K3bNuFlYfUkL-zmvVyLYtmeAkhM7udQyWczCoplo=" }
+              { icon: <BookOpen size={28} />, title: t('servicesSection.s1'), desc: t('servicesSection.s1d'), img: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80" },
+              { icon: <Briefcase size={28} />, title: t('servicesSection.s2'), desc: t('servicesSection.s2d'), img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" },
+              { icon: <TrendingUp size={28} />, title: t('servicesSection.s3'), desc: t('servicesSection.s3d'), img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80" },
+              { icon: <Users size={28} />, title: t('servicesSection.s4'), desc: t('servicesSection.s4d'), img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" },
+              { icon: <Globe size={28} />, title: t('servicesSection.s5'), desc: t('servicesSection.s5d'), img: "https://remote.com/hubfs/Remote%20Website%20-%202025/(Approved)%20Blog%20Images/Blog%20Images/Immigration%20%26%20Visas.png" },
+              { icon: <Shield size={28} />, title: t('servicesSection.s6'), desc: t('servicesSection.s6d'), img: "https://media.istockphoto.com/id/1161001258/photo/scholarship-cap-magnified.jpg?s=2048x2048&w=is&k=20&c=yl9K3bNuFlYfUkL-zmvVyLYtmeAkhM7udQyWczCoplo=" }
             ].map((service, i) => (
               <RevealSection key={i} delay={i * 0.1}>
                 <div className="service-card card">
@@ -154,7 +154,7 @@ const Home = () => {
                     <h3>{service.title}</h3>
                     <p>{service.desc}</p>
                     <Link to="/services" className="service-card__link">
-                      Learn more <ArrowRight size={14} />
+                      {t('servicesSection.learnMore')} <ArrowRight size={14} />
                     </Link>
                   </div>
                 </div>
@@ -169,19 +169,13 @@ const Home = () => {
         <div className="container">
           <div className="why-grid">
             <RevealSection className="why-content">
-              <span className="section-label">Why On Track</span>
-              <h2>Why Students &amp; Parents<br />Trust Us</h2>
+              <span className="section-label">{t('why.label')}</span>
+              <h2>{t('why.title1')}<br />{t('why.title2')}</h2>
               <p className="why-desc">
-                We combine insider admissions knowledge with personalised strategy to give every student an authentic competitive edge — not templates, not generic advice.
+                {t('why.desc')}
               </p>
               <ul className="why-list">
-                {[
-                  "Former admissions officers from Russell Group & Ivy League universities.",
-                  "Personalised 1-on-1 strategy sessions tailored to your unique profile.",
-                  "Proven methodology with a 98% university acceptance rate.",
-                  "Transparent pricing with no hidden costs or surprise upsells.",
-                  "Support for students from 30+ countries across Asia, Middle East & Africa."
-                ].map((item, i) => (
+                {t('why.items').map((item, i) => (
                   <li key={i}>
                     <CheckCircle size={20} />
                     <span>{item}</span>
@@ -189,17 +183,17 @@ const Home = () => {
                 ))}
               </ul>
               <Link to="/about" className="btn btn-outline-dark" style={{ marginTop: '24px' }}>
-                About Our Team <ArrowRight size={16} />
+                {t('why.aboutTeam')} <ArrowRight size={16} />
               </Link>
             </RevealSection>
 
             <RevealSection delay={0.2}>
               <div className="stats-panel">
                 <div className="stats-grid">
-                  <AnimatedStat value="500" label="Students Placed" suffix="+" />
-                  <AnimatedStat value="2" label="Scholarships Won" suffix="M+" />
-                  <AnimatedStat value="15" label="Countries Served" suffix="+" />
-                  <AnimatedStat value="98" label="Visa Success Rate" suffix="%" />
+                  <AnimatedStat value="500" label={t('stats.s1')} suffix="+" />
+                  <AnimatedStat value="2" label={t('stats.s2')} suffix="M+" />
+                  <AnimatedStat value="15" label={t('stats.s3')} suffix="+" />
+                  <AnimatedStat value="98" label={t('stats.s4')} suffix="%" />
                 </div>
               </div>
             </RevealSection>
@@ -228,17 +222,17 @@ const Home = () => {
         <div className="container">
           <RevealSection>
             <div className="section-header text-center">
-              <span className="section-label" style={{ justifyContent: 'center' }}>Study Destinations</span>
-              <h2 className="text-white">Your Dream Destination,<br /><span className="text-gold">Within Reach</span></h2>
+              <span className="section-label" style={{ justifyContent: 'center' }}>{t('dest.label')}</span>
+              <h2 className="text-white">{t('dest.title1')}<br /><span className="text-gold">{t('dest.title2')}</span></h2>
             </div>
           </RevealSection>
 
           <div className="dest-grid">
             {[
-              { country: 'United Kingdom', count: '120+ Universities', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80' },
-              { country: 'United States', count: '200+ Universities', img: 'https://thispriceisusuallyright.com/wp-content/uploads/2014/09/new-york-2.jpg' },
-              { country: 'Canada', count: '80+ Universities', img: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&q=80' },
-              { country: 'Australia', count: '40+ Universities', img: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80' }
+              { country: t('dest.uk'), count: '120+ Universities', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80' },
+              { country: t('dest.us'), count: '200+ Universities', img: 'https://thispriceisusuallyright.com/wp-content/uploads/2014/09/new-york-2.jpg' },
+              { country: t('dest.ca'), count: '80+ Universities', img: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&q=80' },
+              { country: t('dest.au'), count: '40+ Universities', img: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80' }
             ].map((dest, i) => (
               <RevealSection key={i} delay={i * 0.1}>
                 <div className="dest-card">
@@ -254,7 +248,7 @@ const Home = () => {
 
           <div className="text-center" style={{ marginTop: '48px' }}>
             <Link to="/universities" className="btn btn-outline btn-lg">
-              View All Universities <ArrowRight size={18} />
+              {t('dest.viewAll')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -265,8 +259,8 @@ const Home = () => {
         <div className="container">
           <RevealSection>
             <div className="section-header text-center">
-              <span className="section-label" style={{ justifyContent: 'center' }}>Testimonials</span>
-              <h2>What Our Students Say</h2>
+              <span className="section-label" style={{ justifyContent: 'center' }}>{t('testimonials.label')}</span>
+              <h2>{t('testimonials.title')}</h2>
             </div>
           </RevealSection>
 
@@ -320,7 +314,7 @@ const Home = () => {
 
           <div className="text-center" style={{ marginTop: '40px' }}>
             <Link to="/success-stories" className="btn btn-outline-dark">
-              Read All Stories <ArrowRight size={16} />
+              {t('testimonials.readAll')} <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -331,11 +325,11 @@ const Home = () => {
         <div className="container">
           <div className="faq-layout">
             <RevealSection className="faq-header">
-              <span className="section-label">Common Questions</span>
-              <h2>Frequently Asked<br />Questions</h2>
-              <p className="text-muted">Can't find your answer here? Book a free consultation and we'll help you directly.</p>
+              <span className="section-label">{t('faq.label')}</span>
+              <h2>{t('faq.title1')}<br />{t('faq.title2')}</h2>
+              <p className="text-muted">{t('faq.noAnswer')}</p>
               <Link to="/consultation" className="btn btn-secondary" style={{ marginTop: '24px' }}>
-                Ask Us Directly
+                {t('faq.askUs')}
               </Link>
             </RevealSection>
 
@@ -370,10 +364,10 @@ const Home = () => {
         <div className="cta-overlay" />
         <div className="container cta-inner">
           <RevealSection>
-            <h2>Ready to Accelerate Your<br /><span className="text-gold">Global Journey?</span></h2>
-            <p>Schedule a complimentary strategy session with our senior consultants and get a personalised admissions roadmap.</p>
+            <h2>{t('cta.title1')}<br /><span className="text-gold">{t('cta.title2')}</span></h2>
+            <p>{t('cta.desc')}</p>
             <Link to="/consultation" className="btn btn-primary btn-lg">
-              Book Your Free Session <ArrowRight size={18} />
+              {t('cta.btn')} <ArrowRight size={18} />
             </Link>
           </RevealSection>
         </div>

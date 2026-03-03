@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Quote, ArrowRight, MapPin, GraduationCap } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useAnimations';
+import { useLanguage } from '../i18n/LanguageContext';
 import './SuccessStories.css';
 
 const RevealSection = ({ children, className = '', delay = 0 }) => {
@@ -18,6 +19,8 @@ const RevealSection = ({ children, className = '', delay = 0 }) => {
 };
 
 const SuccessStories = () => {
+  const { t } = useLanguage();
+
   const stories = [
     {
       name: "Ahmed Raza", origin: "United Arab Emirates", university: "Imperial College London",
@@ -51,9 +54,9 @@ const SuccessStories = () => {
         <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80" alt="" className="page-header__bg-img" />
         <div className="page-header__bg" />
         <div className="container page-header__inner">
-          <span className="section-label">Real Results</span>
-          <h1>Student<br /><span className="text-gold">Success Stories</span></h1>
-          <p className="page-header__desc">How we've helped ambitious students navigate complex admissions to reach their dream destinations.</p>
+          <span className="section-label">{t('stories.label')}</span>
+          <h1>{t('stories.title1')}<br /><span className="text-gold">{t('stories.title2')}</span></h1>
+          <p className="page-header__desc">{t('stories.desc')}</p>
         </div>
       </section>
 
@@ -98,9 +101,9 @@ const SuccessStories = () => {
 
           <RevealSection>
             <div className="text-center" style={{ marginTop: '64px' }}>
-              <h3 style={{ marginBottom: '16px' }}>Will you be our next success story?</h3>
+              <h3 style={{ marginBottom: '16px' }}>{t('stories.ctaTitle')}</h3>
               <Link to="/consultation" className="btn btn-secondary btn-lg">
-                Book Your Strategy Session <ArrowRight size={18} />
+                {t('stories.ctaBtn')} <ArrowRight size={18} />
               </Link>
             </div>
           </RevealSection>

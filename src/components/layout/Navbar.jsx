@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, GraduationCap, ChevronDown } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [lang, setLang] = useState('EN');
   const location = useLocation();
+  const { language: lang, setLanguage: setLang, t, dir } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -22,11 +23,11 @@ const Navbar = () => {
   }, [location]);
 
   const links = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/services', label: 'Services' },
-    { to: '/universities', label: 'Universities' },
-    { to: '/success-stories', label: 'Success Stories' },
+    { to: '/', label: t('nav.home') },
+    { to: '/about', label: t('nav.about') },
+    { to: '/services', label: t('nav.services') },
+    { to: '/universities', label: t('nav.universities') },
+    { to: '/success-stories', label: t('nav.stories') },
   ];
 
   const languages = ['EN', 'AR', 'ZH', 'HI', 'FR'];
@@ -81,7 +82,7 @@ const Navbar = () => {
           </div>
 
           <Link to="/consultation" className="btn btn-primary btn-sm">
-            Free Consultation
+            {t('nav.cta')}
           </Link>
         </div>
 
@@ -121,7 +122,7 @@ const Navbar = () => {
             ))}
           </div>
           <Link to="/consultation" className="btn btn-primary" style={{ marginTop: '8px', width: '100%' }}>
-            Free Consultation
+            {t('nav.cta')}
           </Link>
         </nav>
       </div>

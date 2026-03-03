@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Target, Heart, Award, Globe, Zap, ArrowRight } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useAnimations';
+import { useLanguage } from '../i18n/LanguageContext';
 import './About.css';
 
 const RevealSection = ({ children, className = '', delay = 0 }) => {
@@ -22,6 +23,8 @@ const RevealSection = ({ children, className = '', delay = 0 }) => {
 };
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="about">
 
@@ -34,10 +37,10 @@ const About = () => {
         />
         <div className="page-header__bg" />
         <div className="container page-header__inner">
-          <span className="section-label">Our Story</span>
-          <h1>About On Track<br /><span className="text-gold">Admissions</span></h1>
+          <span className="section-label">{t('about.label')}</span>
+          <h1>{t('about.title1')}<br /><span className="text-gold">{t('about.title2')}</span></h1>
           <p className="page-header__desc">
-            A global collective of former admissions officers, educational strategists, and international education experts dedicated to unlocking opportunity.
+            {t('about.desc')}
           </p>
         </div>
       </section>
@@ -54,7 +57,7 @@ const About = () => {
               />
               <div className="founder-info">
                 <h3>Dr. Elena Sterling</h3>
-                <span className="founder-role">Founder & Managing Director</span>
+                <span className="founder-role">{t('about.founderRole')}</span>
                 <p>
                   "I founded On Track Admissions after witnessing the immense potential of international students being hindered by systemic barriers and lack of transparent guidance. Our methodology isn't about filling forms — it's about architectural storytelling, helping individuals present their authentic brilliance to the world's most selective institutions."
                 </p>
@@ -63,8 +66,8 @@ const About = () => {
           </RevealSection>
 
           <RevealSection delay={0.2} className="about-story">
-            <span className="section-label">Our Journey</span>
-            <h2>Bridging Ambition<br />& Opportunity</h2>
+            <span className="section-label">{t('about.journeyLabel')}</span>
+            <h2>{t('about.journeyTitle1')}<br />{t('about.journeyTitle2')}</h2>
             <p>
               Headquartered in London with associate offices across Asia and the Middle East, On Track Admissions was established to bridge the gap between ambitious students and tier-one educational institutions worldwide.
             </p>
@@ -82,7 +85,7 @@ const About = () => {
               </div>
               <div className="about-metric">
                 <strong>500+</strong>
-                <span>Students Placed</span>
+                <span>{t('stats.s1').split(' ')[0] || 'Students'}</span>
               </div>
             </div>
           </RevealSection>
@@ -104,14 +107,14 @@ const About = () => {
             <RevealSection>
               <div className="mission-card">
                 <Target size={36} />
-                <h3>Our Mission</h3>
+                <h3>{t('about.missionTitle')}</h3>
                 <p>To democratize access to elite global education by providing strategic, transparent, and highly personalised admissions consulting that empowers students to reach their highest academic potential.</p>
               </div>
             </RevealSection>
             <RevealSection delay={0.15}>
               <div className="mission-card">
                 <Globe size={36} />
-                <h3>Our Vision</h3>
+                <h3>{t('about.visionTitle')}</h3>
                 <p>To be the world's most trusted international educational consultancy, recognized for ethical practices, unparalleled success rates, and cultivating the next generation of global leaders.</p>
               </div>
             </RevealSection>
@@ -124,9 +127,9 @@ const About = () => {
         <div className="container">
           <RevealSection>
             <div className="section-header text-center">
-              <span className="section-label" style={{ justifyContent: 'center' }}>What Guides Us</span>
-              <h2>Our Core Values</h2>
-              <p className="section-desc">The principles that govern our consulting practice and define our commitment to every student.</p>
+              <span className="section-label" style={{ justifyContent: 'center' }}>{t('about.valuesLabel')}</span>
+              <h2>{t('about.valuesTitle')}</h2>
+              <p className="section-desc">{t('about.valuesDesc')}</p>
             </div>
           </RevealSection>
 
@@ -154,12 +157,12 @@ const About = () => {
       <section className="section text-center">
         <div className="container">
           <RevealSection>
-            <h2>Partner with<br />Professionals</h2>
+            <h2>{t('about.partnerTitle')}<br />{t('about.partnerTitle2')}</h2>
             <p className="section-desc" style={{ maxWidth: '560px', margin: '0 auto 40px' }}>
-              Trust your educational future to certified consultants holding memberships in leading international educational bodies.
+              {t('about.partnerDesc')}
             </p>
             <Link to="/consultation" className="btn btn-secondary btn-lg">
-              Start Your Journey <ArrowRight size={18} />
+              {t('about.partnerCta')} <ArrowRight size={18} />
             </Link>
           </RevealSection>
         </div>

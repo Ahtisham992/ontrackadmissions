@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Globe, ArrowRight, X, MapPin, Award, BookOpen, Users, ExternalLink, CheckCircle } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useAnimations';
+import { useLanguage } from '../i18n/LanguageContext';
 import './Universities.css';
 
 const RevealSection = ({ children, className = '', delay = 0 }) => {
@@ -18,6 +19,8 @@ const RevealSection = ({ children, className = '', delay = 0 }) => {
 };
 
 const UniversityModal = ({ uni, onClose }) => {
+  const { t } = useLanguage();
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = ''; };
