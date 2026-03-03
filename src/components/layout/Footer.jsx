@@ -58,6 +58,29 @@ const Footer = () => {
           </div>
         </div>
 
+        <div className="footer__newsletter">
+          <div className="footer__news-content">
+            <h3 className="footer__news-title">{t('footer.newsLabel')}</h3>
+            <p className="footer__news-desc">{t('footer.newsDesc')}</p>
+          </div>
+          <div className="footer__news-form-wrapper">
+            <form className="footer__news-form" onSubmit={(e) => e.preventDefault()}>
+              <div className="footer__news-input-group">
+                <input 
+                  type="email" 
+                  placeholder={t('footer.emailPlaceholder')} 
+                  className="footer__news-input" 
+                  required 
+                />
+                <button type="submit" className="footer__news-btn">
+                  {t('footer.signUp')}
+                </button>
+              </div>
+              <p className="footer__news-note">{t('footer.newsNote')}</p>
+            </form>
+          </div>
+        </div>
+
         <div className="footer__bottom">
           <p>&copy; {new Date().getFullYear()} On Track Admissions. {t('footer.rights')}</p>
           <div className="footer__bottom-links">
