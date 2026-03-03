@@ -33,9 +33,9 @@ const Navbar = () => {
   const languages = ['EN', 'AR', 'ZH', 'HI', 'FR'];
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${isOpen ? 'navbar--open' : ''}`}>
       <div className="container navbar__inner">
-        <Link to="/" className="navbar__logo">
+        <Link to="/" className="navbar__logo" onClick={() => setIsOpen(false)}>
           <div className="navbar__logo-icon">
             <GraduationCap size={22} />
           </div>
@@ -106,6 +106,7 @@ const Navbar = () => {
                 `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`
               }
               end={link.to === '/'}
+              onClick={() => setIsOpen(false)}
             >
               {link.label}
             </NavLink>
@@ -115,13 +116,13 @@ const Navbar = () => {
               <button
                 key={l}
                 className={`lang-pill ${lang === l ? 'lang-pill--active' : ''}`}
-                onClick={() => setLang(l)}
+                onClick={() => { setLang(l); setIsOpen(false); }}
               >
                 {l}
               </button>
             ))}
           </div>
-          <Link to="/consultation" className="btn btn-primary" style={{ marginTop: '8px', width: '100%' }}>
+          <Link to="/consultation" className="btn btn-primary" style={{ marginTop: '8px', width: '100%' }} onClick={() => setIsOpen(false)}>
             {t('nav.cta')}
           </Link>
         </nav>
