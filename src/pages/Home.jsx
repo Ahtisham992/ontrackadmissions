@@ -231,7 +231,7 @@ const Home = () => {
             {[
               { country: 'Russell Group', count: '24 Elite Universities', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80' },
               { country: 'London Universities', count: 'UCL · LSE · KCL · Imperial', img: 'https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&q=80' },
-              { country: 'Scotland', count: 'Edinburgh · Glasgow · St Andrews', img: 'https://images.unsplash.com/photo-1548515651-4ca9f47cbdfc?w=600&q=80' },
+              { country: 'Scotland', count: 'Edinburgh · Glasgow · St Andrews', img: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Skyline_of_Edinburgh.jpg' },
               { country: 'Red Brick Universities', count: 'Manchester · Leeds · Bristol', img: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&q=80' }
             ].map((dest, i) => (
               <RevealSection key={i} delay={i * 0.1}>
