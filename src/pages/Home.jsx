@@ -116,7 +116,7 @@ const Home = () => {
           <div className="trust-bar__inner">
             <span className="trust-bar__label">{t('trust.label')}</span>
             <div className="trust-bar__logos">
-              {['Oxford', 'Cambridge', 'MIT', 'Stanford', 'UCL', 'Toronto', 'Melbourne'].map((uni) => (
+              {['Oxford', 'Cambridge', 'UCL', 'Imperial', 'LSE', 'Edinburgh', 'Manchester', 'KCL'].map((uni) => (
                 <span key={uni} className="trust-bar__logo">{uni}</span>
               ))}
             </div>
@@ -191,9 +191,9 @@ const Home = () => {
               <div className="stats-panel">
                 <div className="stats-grid">
                   <AnimatedStat value="500" label={t('stats.s1')} suffix="+" />
-                  <AnimatedStat value="2" label={t('stats.s2')} suffix="M+" />
-                  <AnimatedStat value="15" label={t('stats.s3')} suffix="+" />
-                  <AnimatedStat value="98" label={t('stats.s4')} suffix="%" />
+                  <AnimatedStat value="98" label={t('stats.s2')} suffix="%" />
+                  <AnimatedStat value="100" label={t('stats.s3')} suffix="+" />
+                  <AnimatedStat value="24" label={t('stats.s4')} suffix="h" />
                 </div>
               </div>
             </RevealSection>
@@ -217,7 +217,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ═══ DESTINATIONS ═══ */}
+      {/* ═══ UK UNIVERSITY GROUPS ═══ */}
       <section className="section destinations-section">
         <div className="container">
           <RevealSection>
@@ -229,10 +229,10 @@ const Home = () => {
 
           <div className="dest-grid">
             {[
-              { country: t('dest.uk'), count: '120+ Universities', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80' },
-              { country: t('dest.us'), count: '200+ Universities', img: 'https://thispriceisusuallyright.com/wp-content/uploads/2014/09/new-york-2.jpg' },
-              { country: t('dest.ca'), count: '80+ Universities', img: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&q=80' },
-              { country: t('dest.au'), count: '40+ Universities', img: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80' }
+              { country: 'Russell Group', count: '24 Elite Universities', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80' },
+              { country: 'London Universities', count: 'UCL · LSE · KCL · Imperial', img: 'https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&q=80' },
+              { country: 'Scotland', count: 'Edinburgh · Glasgow · St Andrews', img: 'https://images.unsplash.com/photo-1548515651-4ca9f47cbdfc?w=600&q=80' },
+              { country: 'Red Brick Universities', count: 'Manchester · Leeds · Bristol', img: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&q=80' }
             ].map((dest, i) => (
               <RevealSection key={i} delay={i * 0.1}>
                 <div className="dest-card">
@@ -275,18 +275,18 @@ const Home = () => {
                 color: "var(--navy-800)"
               },
               {
-                quote: "As an international student, the US system was daunting. The team secured me a significant scholarship at NYU and handled my visa documentation flawlessly.",
+                quote: "As an international student from China, the UK UCAS system was completely new to me. On Track guided me through every step — I received offers from Imperial College and UCL.",
                 name: "Chen Wei",
                 origin: "Beijing, China",
-                uni: "New York University",
+                uni: "Imperial College London",
                 initials: "CW",
                 color: "var(--navy-600)"
               },
               {
-                quote: "I wouldn't have gotten into the University of Toronto without On Track. Their strategy for the supplementary application was a game-changer.",
+                quote: "On Track's knowledge of the UK admissions process is second to none. They helped me craft a personal statement that perfectly matched what Warwick Business School was looking for.",
                 name: "Priya Sharma",
                 origin: "New Delhi, India",
-                uni: "University of Toronto",
+                uni: "University of Warwick",
                 initials: "PS",
                 color: "var(--gold-400)"
               }

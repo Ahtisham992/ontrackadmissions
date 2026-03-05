@@ -31,20 +31,20 @@ const SuccessStories = () => {
       quote: "The consultants didn't just edit my essay — they challenged my thinking. They helped me extract the narrative of my startup experience and mold it into exactly what top UK tech programs were looking for."
     },
     {
-      name: "Priya Sharma", origin: "India", university: "University of Toronto",
-      course: "BCom Rotman Commerce", initials: "PS",
+      name: "Priya Sharma", origin: "India", university: "London School of Economics",
+      course: "BSc Economics", initials: "PS",
       img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
-      before: "Overwhelmed by the various Canadian portals (OUAC) and the supplementary requirements for top business schools.",
-      after: "Admitted to Rotman Commerce (UofT) and UBC Sauder with a $10,000 entrance scholarship.",
-      quote: "Applying to Canada from the CBSE curriculum was confusing. On Track structured a timeline that kept me sane during board exams. Their Rotman video interview insights were invaluable."
+      before: "Strong academic results but struggled to navigate the highly specific UCAS personal statement format required by top UK business schools.",
+      after: "Secured admission to LSE Economics and King's College London, with offers from 4 out of 5 UK universities applied to.",
+      quote: "Applying to UK universities from India felt overwhelming. On Track broke down the UCAS system step by step, crafted a powerful personal statement narrative, and I got into LSE — my dream school."
     },
     {
-      name: "David Chen", origin: "Singapore", university: "Columbia University",
-      course: "BA Economics", initials: "DC",
+      name: "David Chen", origin: "Singapore", university: "University of Edinburgh",
+      course: "BEng Artificial Intelligence", initials: "DC",
       img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
-      before: "Excellent grades but lacked a cohesive 'spike' or theme in extracurriculars for Ivy League admissions.",
-      after: "Early Decision acceptance to Columbia University following strategic revamping of his activity list and Common App essay.",
-      quote: "US admissions felt like a lottery until I met my consultant. We spent weeks brainstorming before writing a single word. They helped me connect debate with economic policy, creating an authentic persona."
+      before: "Excellent grades in A-Levels but struggled to stand out in a highly competitive UCAS applicant pool for AI and Computer Science courses.",
+      after: "Accepted to the University of Edinburgh's AI programme — one of the most competitive and prestigious CS programmes in the UK.",
+      quote: "UK university admissions is a lot more focussed on your personal statement than I expected. On Track helped me craft a compelling narrative that showed not just my grades, but my genuine passion for AI research."
     }
   ];
 

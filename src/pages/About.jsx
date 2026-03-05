@@ -72,7 +72,7 @@ const About = () => {
               Headquartered in London with associate offices across Asia and the Middle East, On Track Admissions was established to bridge the gap between ambitious students and tier-one educational institutions worldwide.
             </p>
             <p>
-              We understand the nuances of global education systems — from the complexities of the US Common App, to decoding UK UCAS personal statements, to exploring post-study work routes in Australia and Canada. Our proprietary frameworks ensure precision, compliance, and competitive edge.
+              We are specialists in the UK admissions system — from crafting world-class UCAS personal statements, to navigating Russell Group and Oxbridge requirements, to supporting students with their UK Student Visa applications. Our proprietary frameworks ensure every student is positioned competitively for the UK's most sought-after programmes.
             </p>
             <div className="about-metrics">
               <div className="about-metric">

@@ -134,80 +134,80 @@ const Universities = () => {
       website: "https://www.ed.ac.uk"
     },
     {
-      name: "University of Toronto", abbr: "UofT", country: "Canada", type: "Public Research",
-      ranking: "Top 20 Global", color: "#002A5C",
-      description: "Canada's largest and most prestigious university, the University of Toronto has three campuses across the Greater Toronto Area and offers over 700 undergraduate and 200 graduate programs.",
-      programs: ["Engineering", "Computer Science", "Rotman Commerce", "Life Sciences", "Arts & Science"],
-      intlStudents: "27% of student body",
-      highlights: ["#1 university in Canada (QS Rankings)", "Located in one of the world's most multicultural cities", "Strong co-op and internship opportunities", "Post-graduation work permit (PGWP) eligibility"],
-      website: "https://www.utoronto.ca"
+      name: "University of Manchester", abbr: "Manchester", country: "Russell Group", type: "Russell Group",
+      ranking: "Top 30 Global", color: "#660099",
+      description: "The University of Manchester is a public research university and a member of the prestigious Russell Group. It's one of the largest universities in the UK with over 40,000 students from 170 countries.",
+      programs: ["Business", "Engineering", "Medicine", "Computer Science", "Social Sciences"],
+      intlStudents: "35% of student body",
+      highlights: ["25 Nobel Prize laureates among staff and alumni", "Strong industry links across the North of England", "#1 in the UK for graduate employability (non-London)", "Vibrant student city with affordable cost of living"],
+      website: "https://www.manchester.ac.uk"
     },
     {
-      name: "University of British Columbia", abbr: "UBC", country: "Canada", type: "Public Research",
-      ranking: "Top 40 Global", color: "#002145",
-      description: "Consistently ranked among the top 40 universities globally, UBC is known for its stunning Vancouver campus, innovative research, and commitment to sustainability.",
-      programs: ["Forestry", "Sauder Business", "Engineering", "Sciences", "Arts"],
+      name: "King's College London", abbr: "KCL", country: "London", type: "Russell Group",
+      ranking: "Top 40 Global", color: "#990000",
+      description: "King's College London is one of the top 40 universities in the world and the fourth oldest in England. Located in the heart of London, it offers exceptional academics with unrivalled connections to industry and government.",
+      programs: ["Law", "Medicine", "Nursing", "Business", "War Studies"],
+      intlStudents: "50% of student body",
+      highlights: ["Exceptional London location across 5 campuses", "Ranked #1 in the UK for Law", "World-leading medical and nursing schools", "Strong links with Parliament, NHS & top law firms"],
+      website: "https://www.kcl.ac.uk"
+    },
+    {
+      name: "London School of Economics", abbr: "LSE", country: "London", type: "Russell Group",
+      ranking: "Top 50 Global", color: "#B22222",
+      description: "LSE is a world-leading social science university specialising in economics, politics, law and sociology. It attracts students and academics from around the globe and has an extraordinary alumni network.",
+      programs: ["Economics", "Finance", "Politics", "Law", "Sociology"],
+      intlStudents: "70% of student body",
+      highlights: ["#1 globally for Social Sciences (QS Rankings)", "Exceptional alumni: 18 world leaders, 35 Nobel laureates", "Unrivalled London networking and placement opportunities", "Specialist focus makes graduates highly sought after"],
+      website: "https://www.lse.ac.uk"
+    },
+    {
+      name: "University of Glasgow", abbr: "Glasgow", country: "Scotland", type: "Russell Group",
+      ranking: "Top 100 Global", color: "#003865",
+      description: "Established in 1451, the University of Glasgow is one of the ancient universities of Scotland and a founding member of Universitas 21. It is consistently ranked in the top 100 universities worldwide.",
+      programs: ["Medicine", "Engineering", "Business", "Arts", "Veterinary Medicine"],
       intlStudents: "30% of student body",
-      highlights: ["One of the most beautiful campuses in the world", "Strong sustainability and climate research", "Co-op programs across all faculties", "Located in Vancouver — top student city globally"],
-      website: "https://www.ubc.ca"
+      highlights: ["Scotland's most international university", "World-class research output", "Beautiful Gothic campus in Glasgow's West End", "Affordable tuition fees significantly lower than England"],
+      website: "https://www.gla.ac.uk"
     },
     {
-      name: "McGill University", abbr: "McGill", country: "Canada", type: "Public Research",
-      ranking: "Top 30 Global", color: "#ED1B2F",
-      description: "Founded in 1821, McGill University is among the most prestigious in Canada. Located in Montreal, it offers a bilingual cultural experience and world-class academics.",
-      programs: ["Medicine", "Law", "Engineering", "Music", "Management"],
-      intlStudents: "31% of student body",
-      highlights: ["Affordable tuition compared to global peers", "Rich bilingual (English/French) environment", "Strong medical and law programs", "Vibrant multicultural Montreal lifestyle"],
-      website: "https://www.mcgill.ca"
-    },
-    {
-      name: "University of Melbourne", abbr: "Melbourne", country: "Australia", type: "Group of Eight",
-      ranking: "Top 15 Global", color: "#094183",
-      description: "The University of Melbourne is Australia's top-ranked university and a global leader in research intensity, graduate employability, and academic reputation.",
-      programs: ["Medicine", "Law", "Engineering", "Business", "Arts"],
-      intlStudents: "42% of student body",
-      highlights: ["#1 university in Australia", "Melbourne Model provides breadth + depth", "Strong post-study work visa pathways", "Vibrant, multicultural city lifestyle"],
-      website: "https://www.unimelb.edu.au"
-    },
-    {
-      name: "University of Sydney", abbr: "Sydney", country: "Australia", type: "Group of Eight",
-      ranking: "Top 20 Global", color: "#E64626",
-      description: "Australia's first university, established in 1850, the University of Sydney combines tradition with innovation across a beautiful heritage campus.",
-      programs: ["Health Sciences", "Engineering", "Business", "Law", "Architecture"],
-      intlStudents: "38% of student body",
-      highlights: ["Australia's oldest and most iconic university", "Strong graduate employment outcomes", "Beautiful sandstone campus in Sydney", "Extensive exchange and study abroad programs"],
-      website: "https://www.sydney.edu.au"
-    },
-    {
-      name: "New York University", abbr: "NYU", country: "USA", type: "Private Research",
-      ranking: "Top 30 Global", color: "#57068C",
-      description: "NYU is one of the largest private universities in the US, with its main campus in the heart of Manhattan, and global campuses in Abu Dhabi and Shanghai.",
-      programs: ["Stern Business", "Tisch Arts", "Law", "Engineering", "Liberal Studies"],
-      intlStudents: "33% of student body",
-      highlights: ["Located in the heart of New York City", "Global campus network (Abu Dhabi, Shanghai)", "Exceptional arts and business programs", "Strong alumni network in finance and media"],
-      website: "https://www.nyu.edu"
-    },
-    {
-      name: "Columbia University", abbr: "Columbia", country: "USA", type: "Ivy League",
-      ranking: "Top 15 Global", color: "#B9D9EB",
-      description: "An Ivy League institution established in 1754, Columbia is the oldest institution of higher education in New York and one of the most prestigious in the world.",
-      programs: ["Engineering", "Journalism", "Business", "Law", "Political Science"],
+      name: "University of Bristol", abbr: "Bristol", country: "Russell Group", type: "Russell Group",
+      ranking: "Top 60 Global", color: "#B01C2E",
+      description: "The University of Bristol is consistently ranked among the top 10 UK universities. Its beautiful Clifton campus combines rich academic heritage with a vibrant student city experience.",
+      programs: ["Engineering", "Law", "Medicine", "Computer Science", "Film & Television"],
       intlStudents: "36% of student body",
-      highlights: ["Ivy League prestige and network", "Located in Morningside Heights, NYC", "Core Curriculum gives intellectual breadth", "World-class journalism and business schools"],
-      website: "https://www.columbia.edu"
+      highlights: ["Ranked top 10 in the UK (QS 2024)", "Strong employer reputation — top UK graduate recruiters", "Beautiful city campus in Clifton, Bristol", "Leading research in aerospace, quantum computing & sustainable energy"],
+      website: "https://www.bristol.ac.uk"
     },
     {
-      name: "Stanford University", abbr: "Stanford", country: "USA", type: "Private Research",
-      ranking: "Top 5 Global", color: "#8C1515",
-      description: "Located in the heart of Silicon Valley, Stanford University is renowned for entrepreneurship, technology innovation, and consistently top-ranked academic programs.",
-      programs: ["Computer Science", "Engineering", "Business", "Medicine", "Law"],
-      intlStudents: "24% of student body",
-      highlights: ["The birthplace of Silicon Valley innovation", "Consistently ranked top 5 globally", "Exceptional entrepreneurship ecosystem", "Beautiful 8,180-acre campus in California"],
-      website: "https://www.stanford.edu"
+      name: "University of Warwick", abbr: "Warwick", country: "Russell Group", type: "Russell Group",
+      ranking: "Top 70 Global", color: "#6B2C91",
+      description: "The University of Warwick is one of the UK's leading research-intensive universities, known for exceptional business, engineering, and mathematics departments.",
+      programs: ["Business & Management", "Computer Science", "Mathematics", "Law", "Engineering"],
+      intlStudents: "40% of student body",
+      highlights: ["Warwick Business School ranked #1 in the UK", "Consistently high graduate employability rates", "Award-winning arts centre", "Strong start-up and entrepreneurship culture"],
+      website: "https://www.warwick.ac.uk"
+    },
+    {
+      name: "University of Leeds", abbr: "Leeds", country: "Russell Group", type: "Russell Group",
+      ranking: "Top 100 Global", color: "#003B7A",
+      description: "The University of Leeds is one of the largest Russell Group universities in the UK, with over 38,000 students. It is known for its research excellence and strong graduate employment outcomes.",
+      programs: ["Medicine", "Law", "Business", "Engineering", "Fashion & Design"],
+      intlStudents: "30% of student body",
+      highlights: ["Ranked top 5 in the UK for research power", "Brilliant student city with low cost of living", "95% of graduates in work or further study within 6 months", "Excellent global alumni network"],
+      website: "https://www.leeds.ac.uk"
+    },
+    {
+      name: "Durham University", abbr: "Durham", country: "Russell Group", type: "Russell Group",
+      ranking: "Top 100 Global", color: "#7B2D8B",
+      description: "Durham University is one of the oldest and most prestigious universities in England. Its collegiate system and stunning cathedral city location make it a unique and sought-after destination.",
+      programs: ["Law", "Business", "Sciences", "Arts & Humanities", "Engineering"],
+      intlStudents: "26% of student body",
+      highlights: ["Collegiate lifestyle similar to Oxford and Cambridge", "Stunning UNESCO World Heritage campus", "Top 10 in the UK for student satisfaction", "Strong international reputation for Law and Business"],
+      website: "https://www.durham.ac.uk"
     }
   ];
 
-  const filters = ['All', 'UK', 'USA', 'Canada', 'Australia'];
+  const filters = ['All', 'Russell Group', 'London', 'Scotland'];
   const filtered = filter === 'All' ? universities : universities.filter(u => u.country === filter);
 
   return (
@@ -216,9 +216,9 @@ const Universities = () => {
         <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=80" alt="" className="page-header__bg-img" />
         <div className="page-header__bg" />
         <div className="container page-header__inner">
-          <span className="section-label">Global Network</span>
-          <h1>Supported<br /><span className="text-gold">Universities</span></h1>
-          <p className="page-header__desc">Comprehensive application support for hundreds of top-tier institutions. Click any university below to learn more.</p>
+          <span className="section-label">UK University Network</span>
+          <h1>Top UK<br /><span className="text-gold">Universities</span></h1>
+          <p className="page-header__desc">Specialist application support for the UK's finest institutions — from ancient Oxbridge colleges to world-leading London universities. Click any card to learn more.</p>
         </div>
       </section>
 
@@ -259,8 +259,8 @@ const Universities = () => {
 
           <RevealSection>
             <div className="text-center" style={{ marginTop: '48px' }}>
-              <p className="text-muted" style={{ marginBottom: '16px' }}>Don't see your target? We support 500+ institutions globally.</p>
-              <Link to="/consultation" className="btn btn-outline-dark">Discuss Your Target Schools</Link>
+              <p className="text-muted" style={{ marginBottom: '16px' }}>Don't see your target UK university listed? We support 100+ UK institutions across England, Scotland, Wales & Northern Ireland.</p>
+              <Link to="/consultation" className="btn btn-outline-dark">Book a Free UK Admissions Consultation</Link>
             </div>
           </RevealSection>
         </div>
