@@ -48,6 +48,18 @@ const Home = () => {
     { q: t('faq.faq5q', "Can you help with scholarship applications?"), a: t('faq.faq5a', "Yes! Scholarship identification and application guidance is one of our core services...") }
   ];
 
+  const slidingUniversities = [
+    { name: "University of Oxford", img: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" },
+    { name: "University of Cambridge", img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80" },
+    { name: "Imperial College London", img: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&q=80" },
+    { name: "University College London", img: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=600&q=80" },
+    { name: "University of Edinburgh", img: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Skyline_of_Edinburgh.jpg" },
+    { name: "King's College London", img: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&q=80" },
+    { name: "University of Manchester", img: "https://www.mooc.global/wp-content/uploads/2021/01/Manchester-photo3.jpg" },
+  ];
+  
+  const infiniteUnis = [...slidingUniversities, ...slidingUniversities];
+
   return (
     <div className="home">
 
@@ -121,6 +133,20 @@ const Home = () => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ FLOATING UNIVERSITIES SLIDER ═══ */}
+      <section className="uni-slider-section">
+        <div className="uni-slider-track">
+          {infiniteUnis.map((uni, i) => (
+            <div className="uni-slider-item" key={i}>
+              <img src={uni.img} alt={uni.name} loading="lazy" />
+              <div className="uni-slider-overlay">
+                <span className="uni-slider-name">{uni.name}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

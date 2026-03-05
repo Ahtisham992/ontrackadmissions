@@ -224,6 +224,119 @@
     color: var(--gray-500);
 }
 
+/* ─── FLOATING & SLIDING UNIVERSITIES ─── */
+.uni-slider-section {
+    padding: 60px 0 20px 0;
+    overflow: hidden;
+    position: relative;
+    background: var(--white);
+}
+
+.uni-slider-section::before,
+.uni-slider-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.uni-slider-section::before {
+    left: 0;
+    background: linear-gradient(to right, var(--white) 0%, transparent 100%);
+}
+
+.uni-slider-section::after {
+    right: 0;
+    background: linear-gradient(to left, var(--white) 0%, transparent 100%);
+}
+
+.uni-slider-track {
+    display: flex;
+    width: max-content;
+    animation: slideInfinite 40s linear infinite;
+    gap: 30px;
+}
+
+.uni-slider-track:hover {
+    animation-play-state: paused;
+}
+
+.uni-slider-item {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    animation: floatVertical 6s ease-in-out infinite;
+    transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.uni-slider-item:nth-child(even) {
+    animation-delay: -3s;
+}
+
+.uni-slider-item:nth-child(3n) {
+    animation-duration: 7s;
+}
+
+.uni-slider-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--shadow-xl);
+    z-index: 10;
+}
+
+.uni-slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.uni-slider-item:hover img {
+    transform: scale(1.1);
+}
+
+.uni-slider-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(6, 17, 43, 0.8) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.uni-slider-name {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@keyframes slideInfinite {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 15px));
+    }
+}
+
+@keyframes floatVertical {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
 /* ─── Section Header ─── */
 .section-header {
     max-width: 620px;
